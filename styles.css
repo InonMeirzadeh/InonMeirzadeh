@@ -10,26 +10,46 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #6C63FF, #3F51B5);
+    background: url('header-background.jpg') center center / cover, linear-gradient(135deg, rgba(108, 99, 255, 0.7), rgba(63, 81, 181, 0.7));
     color: #fff;
-    padding: 2rem 0;
+    padding: 4rem 0;
     text-align: center;
     position: relative;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    letter-spacing: 1px;
+.header-content {
+    position: relative;
+    z-index: 2;
 }
 
-header p {
+.typewriter {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    overflow: hidden;
+    border-right: .15em solid #fff;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
 }
 
 nav {
     margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 nav a {
@@ -54,10 +74,13 @@ section {
     max-width: 900px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-section:hover {
-    transform: translateY(-3px);
+section.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
@@ -68,45 +91,58 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-.project, .blog-post {
+.experience-card, .project-card, .blog-card {
     margin-bottom: 2rem;
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: box-shadow 0.2s;
+    background: #f9f9f9;
 }
 
-.project:hover, .blog-post:hover {
+.experience-card:hover, .project-card:hover, .blog-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project h3, .blog-post h3 {
+.project-card h3, .blog-card h3 {
     margin-top: 0;
     color: #3F51B5;
 }
 
-.project a, .blog-post a {
+.project-card a, .blog-card a {
     color: #6C63FF;
     text-decoration: none;
     font-weight: 500;
 }
 
-.project a:hover, .blog-post a:hover {
+.project-card a:hover, .blog-card a:hover {
     text-decoration: underline;
 }
 
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     background: #3F51B5;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding: 2rem 0;
+    }
     header h1 {
         font-size: 2rem;
     }
