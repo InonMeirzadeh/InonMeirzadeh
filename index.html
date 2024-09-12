@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="toggleTheme">🌙 Toggle Dark Mode</button>
+    </div>
+
     <!-- Header Section -->
     <header>
         <div class="header-content">
@@ -26,7 +31,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="reveal">
+    <section id="about" class="glass reveal">
         <h2>About Me</h2>
         <p>
             Hi, I'm Inon Meirzadeh, a passionate Computer Science graduate with hands-on experience from my internship at Spot by NetApp, where I worked in their dynamic R&D team. I thrive in environments that foster growth, creativity, and impact, and I’m ready to bring innovative solutions to life.
@@ -34,7 +39,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="reveal">
+    <section id="experience" class="glass reveal">
         <h2>Experience</h2>
         <div class="experience-card">
             <h3>R&D Intern at Spot by NetApp</h3>
@@ -60,7 +65,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="reveal">
+    <section id="skills" class="glass reveal">
         <h2>Skills</h2>
         <ul>
             <li>Troubleshooting</li>
@@ -72,7 +77,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="reveal">
+    <section id="projects" class="glass reveal">
         <h2>Projects</h2>
         <div class="project-card">
             <h3>Arcade Games AI Framework</h3>
@@ -95,7 +100,7 @@
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="reveal">
+    <section id="blog" class="glass reveal">
         <h2>Blog</h2>
         <article class="blog-card">
             <h3><a href="blog/post1.html">Understanding AI in Arcade Games</a></h3>
@@ -110,7 +115,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="reveal">
+    <section id="contact" class="glass reveal">
         <h2>Contact</h2>
         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:inon164@gmail.com">inon164@gmail.com</a></p>
         <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/inon-meirzadeh-7b342721a">Inon Meirzadeh</a></p>
@@ -152,8 +157,13 @@
             }
         }
     };
-
     window.addEventListener('scroll', revealOnScroll);
+
+    // Dark Mode Toggle
+    const toggleThemeButton = document.getElementById('toggleTheme');
+    toggleThemeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
     </script>
 </body>
 </html>
