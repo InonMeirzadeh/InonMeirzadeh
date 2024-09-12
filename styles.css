@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f0f4f8;
     color: #333;
+    cursor: url('custom-cursor.png'), auto;
     transition: all 0.3s ease;
 }
 
@@ -14,167 +15,219 @@ body {
     color: #e0e0e0;
 }
 
+/* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    top: 0;
     left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 2rem 1rem;
-    transition: background-color 0.3s ease;
-    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar .logo {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.sidebar nav ul {
+.sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.sidebar nav ul li {
-    margin-bottom: 1rem;
+.sidebar ul li {
+    margin: 1rem 0;
 }
 
-.sidebar nav ul li a,
-.sidebar nav ul li button {
+.sidebar ul li a {
     color: #333;
     text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.sidebar nav ul li a:hover,
-.sidebar nav ul li button:hover {
-    background-color: #e0e0e0;
-}
-
-.dark-mode .sidebar {
-    background-color: #1e1e1e;
-}
-
-.dark-mode .sidebar nav ul li a,
-.dark-mode .sidebar nav ul li button {
-    color: #e0e0e0;
-}
-
-.content {
-    margin-left: 270px; /* width of the sidebar + some gap */
-    padding: 2rem;
+.sidebar ul li a:hover {
+    color: #1e90ff;
 }
 
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #1e90ff, #ff6f61);
+    color: white;
     position: relative;
-    text-align: center;
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #6c63ff 0%, #1e90ff 100%);
-    color: #fff;
     overflow: hidden;
 }
 
 .hero-content {
-    position: relative;
     z-index: 2;
+    text-align: left;
+    max-width: 600px;
 }
 
-.hero .btn-primary {
-    background-color: #fff;
-    color: #1e90ff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.hero-visual {
+    z-index: 1;
+    opacity: 0.8;
 }
 
-.hero .btn-primary:hover {
-    background-color: #f0f4f8;
+.hero img {
+    max-width: 100%;
+    height: auto;
 }
 
-.hero-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('animated-background.svg') center center / cover no-repeat;
-    opacity: 0.2;
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.section {
-    padding: 3rem 2rem;
-    margin: 2rem 0;
-    background-color: #ffffff;
+.cta-button:hover {
+    background-color: #d64b42;
+    transform: scale(1.05);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 900px;
     transition: all 0.3s ease;
 }
 
-.dark-mode .section {
-    background-color: #1e1e1e;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(30, 30, 30, 0.7);
+.dark-mode .glass {
+    background: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.neumorphism {
+.section-title {
+    font-size: 2.5rem;
+    color: #1e90ff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.dark-mode .section-title {
+    color: #bb86fc;
+}
+
+/* Skill Bars */
+.skill-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.skill-title {
+    flex: 1;
+    font-weight: bold;
+}
+
+.progress-bar {
+    flex: 4;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.progress {
+    height: 20px;
+    background-color: #1e90ff;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.dark-mode .progress {
+    background-color: #bb86fc;
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.carousel-card {
+    flex: none;
+    scroll-snap-align: center;
     background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7);
-    padding: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dark-mode .neumorphism {
-    background-color: #1e1e1e;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(30, 30, 30, 0.7);
+.carousel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.btn-link {
-    color: #1e90ff;
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #1e90ff;
+    color: #fff;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.dark-mode footer {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.3s ease;
 }
 
-.btn-link:hover {
-    color: #187bcd;
-}
-
-.circular-progress {
-    width: 100px;
-    height: 100px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin: 1rem auto;
-    position: relative;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .circular-progress {
-    background-color: #333;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+/* Custom Cursor */
+body {
+    cursor: url('custom-cursor.png'), auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .content {
-        margin-left: 0;
-        padding: 1rem;
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 1rem;
     }
 
-    .sidebar {
-        width: 200px;
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero-visual {
+        width: 100%;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-card {
+        width: 90%;
+        margin: 1rem 0;
     }
 }
