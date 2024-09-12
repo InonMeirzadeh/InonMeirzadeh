@@ -4,46 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inon Meirzadeh | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Floating Action Button -->
-    <div class="floating-action-btn">
-        <a href="#contact" title="Contact Me"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <!-- Header Section with Animated Intro -->
-    <header>
-        <div class="header-content">
-            <h1 class="animated-header">Inon Meirzadeh</h1>
-            <p class="header-tagline">Creating Innovative Solutions in Software Development & Data Analysis</p>
-            <nav id="navbar">
-                <a href="#about">About Me</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Inon Meirzadeh</h2>
         </div>
-        <div class="header-wave"></div> <!-- Creative Divider -->
-    </header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="toggleTheme">🌙 Dark Mode</button></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <!-- About Section -->
-    <section id="about" class="section reveal">
-        <div class="content-wrapper">
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Animated Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm Inon</h1>
+                <p class="hero-subtitle">Aspiring Software Developer | Python Developer | Data Analyst</p>
+                <a href="#about" class="btn-primary">Discover More</a>
+            </div>
+            <div class="hero-animation"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section neumorphism">
             <h2>About Me</h2>
             <p>
                 Hi, I'm Inon Meirzadeh, a passionate Computer Science graduate with hands-on experience from my internship at Spot by NetApp, where I worked in their dynamic R&D team. I thrive in environments that foster growth, creativity, and impact, and I’m ready to bring innovative solutions to life.
             </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section reveal">
-        <div class="content-wrapper">
+        <!-- Experience Section -->
+        <section id="experience" class="section neumorphism">
             <h2>Experience</h2>
             <div class="experience-card">
                 <h3>R&D Intern at Spot by NetApp</h3>
@@ -66,96 +71,90 @@
                 <h3>Office Manager at Israeli Air Force</h3>
                 <p>October 2014 - August 2017 (2 years 11 months)</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section with Interactive Bars -->
-    <section id="skills" class="section reveal">
-        <div class="content-wrapper">
+        <!-- Skills Section -->
+        <section id="skills" class="section neumorphism">
             <h2>Skills</h2>
-            <div class="skill-bar" data-skill="80%">
-                <p>Troubleshooting</p>
-                <div class="bar"><span></span></div>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="circular-progress" data-progress="85"></div>
+                    <span>Troubleshooting</span>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-progress="70"></div>
+                    <span>Analytics</span>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-progress="75"></div>
+                    <span>Research Skills</span>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-progress="90"></div>
+                    <span>Problem Solving</span>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" data-progress="80"></div>
+                    <span>Data-Driven Solutions</span>
+                </div>
             </div>
-            <div class="skill-bar" data-skill="85%">
-                <p>Analytics</p>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="skill-bar" data-skill="75%">
-                <p>Research Skills</p>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="skill-bar" data-skill="90%">
-                <p>Problem Solving</p>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="skill-bar" data-skill="80%">
-                <p>Data-Driven Solutions</p>
-                <div class="bar"><span></span></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section with Hover Animations -->
-    <section id="projects" class="section reveal">
-        <div class="content-wrapper">
+        <!-- Projects Section -->
+        <section id="projects" class="section neumorphism">
             <h2>Projects</h2>
             <div class="project-card">
                 <h3>Arcade Games AI Framework</h3>
                 <p>Developed a framework to teach AI and perform high-level gameplay in arcade games using Python and Pygame. Created an intuitive UI for easy AI training with adjustable settings.</p>
                 <p><strong>Technologies:</strong> Python, Pygame</p>
-                <p><a href="https://github.com/yourusername/arcade-games-ai-framework" target="_blank">View Project on GitHub</a></p>
+                <p><a href="https://github.com/yourusername/arcade-games-ai-framework" target="_blank" class="btn-link">View Project on GitHub</a></p>
             </div>
             <div class="project-card">
                 <h3>Job Listings Scraper</h3>
                 <p>A Python script that retrieves job postings for junior positions in Israel from various companies. Includes features like data retrieval, parsing, and storing using PostgreSQL.</p>
                 <p><strong>Technologies:</strong> Python, SQL, PostgreSQL</p>
-                <p><a href="https://github.com/yourusername/job-listings-scraper" target="_blank">View Project on GitHub</a></p>
+                <p><a href="https://github.com/yourusername/job-listings-scraper" target="_blank" class="btn-link">View Project on GitHub</a></p>
             </div>
             <div class="project-card">
                 <h3>Customer Feedback Analysis Tool</h3>
                 <p>Built a feature for a startup application to evaluate and analyze user feedback using AI integration for personalized recommendations.</p>
                 <p><strong>Technologies:</strong> C#, AI Service Integration</p>
-                <p><a href="https://github.com/yourusername/customer-feedback-analysis" target="_blank">View Project on GitHub</a></p>
+                <p><a href="https://github.com/yourusername/customer-feedback-analysis" target="_blank" class="btn-link">View Project on GitHub</a></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section reveal">
-        <div class="content-wrapper">
+        <!-- Blog Section -->
+        <section id="blog" class="section neumorphism">
             <h2>Blog</h2>
             <article class="blog-card">
-                <h3><a href="blog/post1.html">Understanding AI in Arcade Games</a></h3>
+                <h3><a href="blog/post1.html" class="btn-link">Understanding AI in Arcade Games</a></h3>
                 <p>Posted on: July 10, 2024</p>
                 <p>An overview of how AI can be applied in arcade games to enhance gameplay and user experience, based on my project.</p>
             </article>
             <article class="blog-card">
-                <h3><a href="blog/post2.html">Tips for Junior Developers in Tech</a></h3>
+                <h3><a href="blog/post2.html" class="btn-link">Tips for Junior Developers in Tech</a></h3>
                 <p>Posted on: August 15, 2024</p>
                 <p>Advice and tips for junior developers looking to break into the tech industry, including personal experiences and strategies.</p>
             </article>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section reveal">
-        <div class="content-wrapper">
+        <!-- Contact Section -->
+        <section id="contact" class="section neumorphism">
             <h2>Contact</h2>
             <p><i class="fas fa-envelope"></i> Email: <a href="mailto:inon164@gmail.com">inon164@gmail.com</a></p>
             <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/inon-meirzadeh-7b342721a">Inon Meirzadeh</a></p>
             <p><i class="fas fa-map-marker-alt"></i> Location: Kiryat Ono, Tel Aviv District, Israel</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Inon Meirzadeh. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/inon-meirzadeh-7b342721a"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:inon164@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </footer>
+        <!-- Footer Section -->
+        <footer class="neumorphism">
+            <p>&copy; 2024 Inon Meirzadeh. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/inon-meirzadeh-7b342721a"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:inon164@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
+    </main>
 
     <script>
     // Smooth Scroll
@@ -189,14 +188,6 @@
     const toggleThemeButton = document.getElementById('toggleTheme');
     toggleThemeButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-    });
-
-    // Skill Bars Animation
-    const skillBars = document.querySelectorAll('.skill-bar');
-    skillBars.forEach(skill => {
-        const bar = skill.querySelector('.bar span');
-        const skillLevel = skill.getAttribute('data-skill');
-        bar.style.width = skillLevel;
     });
     </script>
 </body>
