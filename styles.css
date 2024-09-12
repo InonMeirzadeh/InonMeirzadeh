@@ -9,6 +9,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
 header {
     background: url('header-background.jpg') center center / cover, linear-gradient(135deg, rgba(108, 99, 255, 0.7), rgba(63, 81, 181, 0.7));
     color: #fff;
@@ -66,16 +71,21 @@ nav a:hover {
     border-bottom: 2px solid #fff;
 }
 
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
 section {
     padding: 3rem 1rem;
     margin: 2rem auto;
-    background: #fff;
-    border-radius: 8px;
     max-width: 900px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
     opacity: 0;
     transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 section.active {
@@ -94,29 +104,15 @@ h2 {
 .experience-card, .project-card, .blog-card {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: box-shadow 0.2s;
-    background: #f9f9f9;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.2s, transform 0.3s ease;
+    cursor: pointer;
 }
 
 .experience-card:hover, .project-card:hover, .blog-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3, .blog-card h3 {
-    margin-top: 0;
-    color: #3F51B5;
-}
-
-.project-card a, .blog-card a {
-    color: #6C63FF;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.project-card a:hover, .blog-card a:hover {
-    text-decoration: underline;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 footer {
@@ -124,8 +120,7 @@ footer {
     padding: 1.5rem 0;
     background: #3F51B5;
     color: #fff;
-    position: relative; /* Changed from fixed to relative */
-    margin-top: 2rem; /* Add margin to ensure spacing from content */
+    margin-top: 2rem;
 }
 
 .social-icons {
