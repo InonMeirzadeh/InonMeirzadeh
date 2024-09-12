@@ -124,7 +124,8 @@ footer {
     padding: 1.5rem 0;
     background: #3F51B5;
     color: #fff;
-    position: relative;
+    position: relative; /* Changed from fixed to relative */
+    margin-top: 2rem; /* Add margin to ensure spacing from content */
 }
 
 .social-icons {
