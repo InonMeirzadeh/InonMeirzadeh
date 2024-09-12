@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This website showcases my skills, proj
 
 ## 🌐 Live Demo
 
-You can view the live version of my portfolio at: [https://inonmeirzadeh.github.io](https://inonmeirzadeh.github.io) (Replace with your actual GitHub Pages URL)
+You can view the live version of my portfolio at: [[https://inonmeirzadeh.github.io](https://inonmeirzadeh.github.io)](https://inonmeirzadeh.github.io/InonMeirzadeh/) (Replace with your actual GitHub Pages URL)
 
 ## 📋 Features
 
