@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: #f0f4f8;
+    color: #333333;
     transition: all 0.3s ease;
 }
 
@@ -68,15 +68,20 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #1e90ff;
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+}
+
+.dark-mode .glass {
+    background: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 section {
@@ -95,19 +100,27 @@ section.active {
 
 h2 {
     font-size: 2rem;
-    color: #3F51B5;
+    color: #1e90ff;
     margin-bottom: 1rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
+}
+
+.dark-mode h2 {
+    color: #bb86fc;
 }
 
 .experience-card, .project-card, .blog-card {
     margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     transition: box-shadow 0.2s, transform 0.3s ease;
     cursor: pointer;
+}
+
+.dark-mode .experience-card, .dark-mode .project-card, .dark-mode .blog-card {
+    background: rgba(30, 30, 30, 0.9);
 }
 
 .experience-card:hover, .project-card:hover, .blog-card:hover {
@@ -118,9 +131,14 @@ h2 {
 footer {
     text-align: center;
     padding: 1.5rem 0;
-    background: #3F51B5;
+    background: #1e90ff;
     color: #fff;
     margin-top: 2rem;
+}
+
+.dark-mode footer {
+    background: #121212;
+    color: #e0e0e0;
 }
 
 .social-icons {
