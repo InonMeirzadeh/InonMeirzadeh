@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inon Meirzadeh | Portfolio</title>
+    <meta name="description" content="Portfolio of Inon Meirzadeh - Aspiring Software Developer, Python Developer, and Data Analyst. Showcasing projects, skills, and professional experience.">
+    <meta name="keywords" content="Inon Meirzadeh, Software Developer, Python Developer, Data Analyst, Portfolio, Projects, Skills, Experience">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
@@ -19,7 +22,7 @@
         <div class="header-content">
             <h1>Inon Meirzadeh</h1>
             <p class="typewriter">Aspiring Software Developer | Python Developer | Data Analyst</p>
-            <nav id="navbar">
+            <nav id="navbar" role="navigation">
                 <a href="#about">About Me</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
@@ -30,13 +33,13 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="glass reveal">
+    <section id="about" class="glass reveal" role="region" aria-labelledby="about-heading">
         <div class="about-container">
             <div class="about-image">
-                <img src="DSC00322.JPG" alt="Inon Meirzadeh Profile Picture">
+                <img src="DSC00322.JPG" alt="Inon Meirzadeh smiling in front of a colorful background" />
             </div>
             <div class="about-text">
-                <h2>About Me</h2>
+                <h2 id="about-heading">About Me</h2>
                 <p>
                     Hi, I'm Inon Meirzadeh, a passionate Computer Science graduate with hands-on experience from my internship at Spot by NetApp, where I worked in their dynamic R&D team. I thrive in environments that foster growth, creativity, and impact, and I’m ready to bring innovative solutions to life.
                 </p>
