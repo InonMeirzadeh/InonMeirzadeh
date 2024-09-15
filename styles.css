@@ -273,3 +273,25 @@ nav a:hover {
     transition: color 0.3s, border-bottom 0.3s;
 }
 
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #ff3d2e;
+}
