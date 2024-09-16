@@ -14,7 +14,7 @@
 <body>
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
-        <button id="toggleTheme">🌙Dark Mode</button>
+        <button id="toggleTheme">🌙 Dark Mode</button>
     </div>
 
     <!-- Header Section -->
@@ -25,6 +25,7 @@
         </div>
     </header>
 
+    <!-- Navigation Bar -->
     <nav id="navbar" role="navigation">
         <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
@@ -32,7 +33,6 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
-
 
     <!-- About Section -->
     <section id="about" class="glass reveal" role="region" aria-labelledby="about-heading">
@@ -49,77 +49,27 @@
         </div>
     </section>
 
-
     <!-- Experience Section -->
     <section id="experience" class="glass reveal">
         <h2>Experience</h2>
-        <div class="card experience-card">
-            <h3>R&D Intern at Spot by NetApp</h3>
-            <p>February 2023 - May 2023 (4 months)</p>
-            <ul>
-                <li>Specialized in server-side development using Java and Python.</li>
-                <li>Developed customer price tiering code and automated AWS S3 file management.</li>
-                <li>Worked with databases and utilized Postman for API testing.</li>
-            </ul>
-        </div>
-        <div class="card experience-card">
-            <h3>Office Manager at Shaham Millennium Systems Ltd.</h3>
-            <p>January 2018 - September 2020 (2 years 9 months)</p>
-        </div>
-        <div class="card experience-card">
-            <h3>Outdoor Instructor at Camp Ramah in California</h3>
-            <p>June 2017 - August 2017 (3 months)</p>
-        </div>
-        <div class="card experience-card">
-            <h3>Office Manager at Israeli Air Force</h3>
-            <p>October 2014 - August 2017 (2 years 11 months)</p>
-        </div>
+        <!-- Experience Cards -->
+        <!-- Add your experience cards here -->
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="glass reveal">
         <h2>Skills</h2>
         <div class="skills-container">
-            <div class="card skill-card">
-                <h3>Troubleshooting</h3>
-            </div>
-            <div class="card skill-card">
-                <h3>Analytics</h3>
-            </div>
-            <div class="card skill-card">
-                <h3>Research Skills</h3>
-            </div>
-            <div class="card skill-card">
-                <h3>Problem Solving</h3>
-            </div>
-            <div class="card skill-card">
-                <h3>Data-Driven Solutions</h3>
-            </div>
+            <!-- Skill Cards -->
+            <!-- Add your skill cards here -->
         </div>
     </section>
-
 
     <!-- Projects Section -->
     <section id="projects" class="glass reveal">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Arcade Games AI Framework</h3>
-            <p>Developed a framework to teach AI and perform high-level gameplay in arcade games using Python and Pygame. Created an intuitive UI for easy AI training with adjustable settings.</p>
-            <p><strong>Technologies:</strong> Python, Pygame</p>
-            <p><a href="https://github.com/Tom-Basha/ArcadeLearner" target="_blank">View Project on GitHub</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Job Listings Scraper</h3>
-            <p>A Python script that retrieves job postings for junior positions in Israel from various companies. Includes features like data retrieval, parsing, and storing using PostgreSQL.</p>
-            <p><strong>Technologies:</strong> Python, SQL, PostgreSQL</p>
-            <p><a href="https://github.com/InonMeirzadeh/job_scraper" target="_blank">View Project on GitHub</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Shopping List Management System</h3>
-            <p>A Flask-based web application for efficiently managing product inventory and shopping lists. The system allows users to add, update, delete, and search for products. It also automatically generates a shopping list, sorts products by name or quantity.</p>
-            <p><strong>Technologies:</strong> Flask (Python), SQLite database, HTML, CSS, JavaScript.</p>
-            <p><a href="https://github.com/InonMeirzadeh/shopping_list" target="_blank">View Project on GitHub</a></p>
-        </div>
-
+        <!-- Project Cards -->
+        <!-- Add your project cards here -->
     </section>
 
     <!-- Contact Section -->
@@ -139,6 +89,10 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <!-- JavaScript for Interactivity -->
     <script>
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -164,17 +118,17 @@
         // Scroll Reveal Animation
         const revealElements = document.querySelectorAll('.reveal');
         const revealOnScroll = () => {
-            for (let i = 0; i < revealElements.length; i++) {
+            revealElements.forEach(element => {
                 const windowHeight = window.innerHeight;
-                const elementTop = revealElements[i].getBoundingClientRect().top;
+                const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
 
                 if (elementTop < windowHeight - elementVisible) {
-                    revealElements[i].classList.add('active');
+                    element.classList.add('active');
                 } else {
-                    revealElements[i].classList.remove('active');
+                    element.classList.remove('active');
                 }
-            }
+            });
         };
         window.addEventListener('scroll', revealOnScroll);
 
@@ -183,9 +137,7 @@
         toggleThemeButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
-    </script>
 
-    <script>
         // Show "Back to Top" Button on Scroll
         const backToTopButton = document.getElementById('backToTop');
         window.onscroll = function() {
@@ -201,10 +153,5 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         });
     </script>
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">↑</button>
-
-
-
 </body>
 </html>
