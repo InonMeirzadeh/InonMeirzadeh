@@ -231,11 +231,16 @@ input:valid, textarea:valid {
 
 
 footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 1.5rem 0;
-    background: #1e90ff;
-    color: #fff;
-    margin-top: 2rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .dark-mode footer {
@@ -248,10 +253,14 @@ footer {
 }
 
 .social-icons a {
-    color: #fff;
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff;
 }
 
 /* Responsive Design */
