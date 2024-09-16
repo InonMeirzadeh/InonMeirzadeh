@@ -225,8 +225,9 @@
     </script>
 
     <script>
-        // Enhanced Scroll Reveal Animation
+        // Ensure 'revealElements' is only declared once
         const revealElements = document.querySelectorAll('.reveal, section h2');
+
         const revealOnScroll = () => {
             revealElements.forEach(element => {
                 const windowHeight = window.innerHeight;
@@ -240,8 +241,10 @@
                 }
             });
         };
+
         window.addEventListener('scroll', revealOnScroll);
     </script>
+
 
     <script>
         // Lightbox Effect for Project Images
