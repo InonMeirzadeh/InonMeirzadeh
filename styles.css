@@ -193,6 +193,43 @@ h2 {
     transform: translateY(-5px);
 }
 
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+button.btn {
+    margin-top: 10px;
+    width: fit-content;
+}
+
+/* Input Field Validation */
+input:invalid, textarea:invalid {
+    border-color: #ff6f61;
+}
+
+input:valid, textarea:valid {
+    border-color: #1e90ff;
+}
+
+
 footer {
     text-align: center;
     padding: 1.5rem 0;
