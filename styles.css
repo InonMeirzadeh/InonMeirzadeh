@@ -203,7 +203,7 @@ h2 {
     color: #bb86fc;
 }
 
-.experience-card, .project-card, .blog-card {
+.experience-card {
     margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 15px;
@@ -216,10 +216,51 @@ h2 {
     background: rgba(30, 30, 30, 0.9);
 }
 
-.experience-card:hover, .project-card:hover, .blog-card:hover {
+.experience-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
+
+/* Project Cards Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    gap: 20px; /* Adds space between cards */
+    justify-content: center; /* Centers the cards in the container */
+    margin: 20px 0;
+    padding: 10px;
+}
+
+/* Individual Project Cards */
+.project-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Adjusts card width for three columns with a gap */
+    min-width: 280px; /* Ensures cards don't get too narrow on smaller screens */
+    flex-grow: 1; /* Allows cards to expand if there's extra space */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%; /* Single column for small screens */
+    }
+}
+
 
 /* Contact Form Styling */
 form {
