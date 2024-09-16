@@ -42,12 +42,21 @@ a:hover {
     z-index: 20;
 }
 
+/* Dynamic Background Animation for Header */
 header {
-    background: url('header-background.jpg') center center / cover, linear-gradient(135deg, rgba(108, 99, 255, 0.7), rgba(63, 81, 181, 0.7));
+    background: linear-gradient(135deg, #6c63ff, #3f51b5);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite; /* Apply animation */
     color: #fff;
     padding: 4rem 0;
     text-align: center;
     position: relative;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .header-content {
