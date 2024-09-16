@@ -112,6 +112,9 @@
             <h3>Job Listings Scraper</h3>
             <p>A Python script that retrieves job postings for junior positions in Israel from various companies. Includes features like data retrieval, parsing, and storing using PostgreSQL.</p>
             <p><strong>Technologies:</strong> Python, SQL, PostgreSQL</p>
+            <a href="path/to/large-image.jpg" class="lightbox">
+                <img src="path/to/thumbnail.jpg" alt="Arcade Games AI Framework">
+            </a>
             <p><a href="https://github.com/InonMeirzadeh/job_scraper" target="_blank">View Project on GitHub</a></p>
         </div>
         <div class="project-card">
@@ -203,5 +206,46 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         });
     </script>
+
+    <script>
+        // Enhanced Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal, section h2');
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+    </script>
+
+    <script>
+        // Lightbox Effect for Project Images
+        document.querySelectorAll('.lightbox').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lightboxOverlay = document.createElement('div');
+                lightboxOverlay.className = 'lightbox-overlay';
+                const lightboxImage = document.createElement('img');
+                lightboxImage.src = this.href;
+                lightboxOverlay.appendChild(lightboxImage);
+                document.body.appendChild(lightboxOverlay);
+                lightboxOverlay.style.display = 'flex';
+
+                lightboxOverlay.addEventListener('click', () => {
+                    lightboxOverlay.remove();
+                });
+            });
+        });
+    </script>
+
+
 </body>
 </html>
