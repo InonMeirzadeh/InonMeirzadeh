@@ -330,25 +330,24 @@ nav a:hover {
 }
 
 #backToTop {
-    display: none; /* Hidden by default */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #ff6f61;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Hidden by default */
+    background-color: #1e90ff;
     color: white;
-    cursor: pointer;
-    padding: 10px;
+    border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #backToTop:hover {
-    background-color: #ff3d2e;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 0.8; /* Make the button slightly transparent on hover */
 }
 
 /* Animation for Section Headers */
