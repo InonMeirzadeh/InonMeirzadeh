@@ -14,6 +14,14 @@ body {
     color: #e0e0e0;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+}
+
 header {
     background: url('header-background.jpg') center center / cover, linear-gradient(135deg, rgba(108, 99, 255, 0.7), rgba(63, 81, 181, 0.7));
     color: #fff;
