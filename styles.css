@@ -1,13 +1,32 @@
 /* General Styles */
 body {
     background-color: #f0f4f8;
-    color: #333333;
+    color: #333;
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     transition: all 0.3s ease;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; /* Make headings bold for emphasis */
+    margin-bottom: 20px; /* Add spacing below headings */
+}
+p, li {
+    font-size: 1rem; /* Adjust font size for better readability */
+    margin-bottom: 15px; /* Add spacing between paragraphs and list items */
+}
+a {
+    color: #1e90ff; /* A brighter color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f61; /* Change color on hover */
+}
+
 
 .dark-mode {
     background-color: #121212;
