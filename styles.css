@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background: linear-gradient(to bottom right, #f0f4f8, #e0e7ff);
+    background-color: #f0f4f8;
     color: #333333;
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
@@ -60,10 +60,10 @@ nav {
 }
 
 nav a {
-    color: #333;
+    color: #fff;
     margin: 0 1rem;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 0.3rem;
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -155,11 +155,11 @@ section.active {
 
 
 h2 {
-    font-size: 2rem;
     color: #1e90ff;
     margin-bottom: 1rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .dark-mode h2 {
