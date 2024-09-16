@@ -151,6 +151,20 @@
         <p><i class="fas fa-map-marker-alt"></i> Location: Kiryat Ono, Tel Aviv District, Israel</p>
     </section>
 
+    <script>
+        // Contact form submission using EmailJS
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            emailjs.sendForm('service_lhiy4g6', 'template_yai744w', this)
+                .then(function(response) {
+                    alert('Message sent successfully! Thank you for reaching out.');
+                }, function(error) {
+                    alert('Failed to send the message. Please try again later.');
+                });
+        });
+    </script>
+
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
@@ -269,6 +283,14 @@
             document.body.classList.toggle('dark-mode');
         });
     </script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+       (function(){
+           emailjs.init("rOrcTvfFF9_g7boKP"); // Replace with your user ID from EmailJS
+       })();
+    </script>
+
 
 
 </body>
