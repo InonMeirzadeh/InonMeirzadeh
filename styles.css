@@ -44,7 +44,7 @@ a:hover {
 
 /* Dynamic Background Animation for Header */
 header {
-    background: linear-gradient(135deg, #6c63ff, #3f51b5);
+    background: url('header-background.jpg') center center / cover, linear-gradient(135deg, #6c63ff, #3f51b5);
     background-size: 400% 400%;
     animation: gradientBackground 15s ease infinite; /* Apply animation */
     color: #fff;
