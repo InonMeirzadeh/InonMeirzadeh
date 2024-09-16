@@ -191,12 +191,6 @@
         };
         window.addEventListener('scroll', revealOnScroll);
 
-        // Dark Mode Toggle
-        const toggleThemeButton = document.getElementById('toggleTheme');
-        toggleThemeButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-
         // Show "Back to Top" Button on Scroll
         const backToTopButton = document.getElementById('backToTop');
         window.onscroll = function() {
@@ -249,6 +243,14 @@
                     lightboxOverlay.remove();
                 });
             });
+        });
+    </script>
+
+    <script>
+        // Dark Mode Toggle with Animation
+        const toggleThemeButton = document.getElementById('toggleTheme');
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
 
