@@ -58,7 +58,7 @@ header {
 
 /* Floating Navigation Bar */
 nav {
-    background: rgba(255, 255, 255, 0.9);
+    background-color: #1e90ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -238,9 +238,10 @@ footer {
 }
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the elements */
+    justify-content: center; /* Center align content */
+    gap: 10px; /* Add some space between elements */
 }
 
 .dark-mode footer {
@@ -249,7 +250,7 @@ footer {
 }
 
 .social-icons {
-    margin-top: 0.5rem;
+    margin-top: 10px;
 }
 
 .social-icons a {
